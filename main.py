@@ -3,7 +3,6 @@ from flask import Flask, render_template, url_for, request
 from random import randint
 
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 
 import os
 
@@ -23,10 +22,11 @@ def show_home_page():
 
 
 def auto_recording_forms(URL, count_loops):
-    options = Options()
+    options = webdriver.ChromeOptions()
+    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     options.add_argument("--headless")
-    options.binary_location = os.environ.get("PATH")
-    driver = webdriver.Firefox(executable_path=os.environ.get("GECKO_PATH"), options=options)
+
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
 
     try:
         driver.get(URL)
