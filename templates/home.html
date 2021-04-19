@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='css/style.css') }}">
+    <title>Auto Recording Google Forms</title>
+</head>
+<body>
+    <div class="main_content_container">
+        <div class="input_form">
+            <form id="form">
+                <div class="form_frame_input url_input">
+                    <label class="label_input_url">Ссылка на google form</label>
+                    <input class="input" type="text" name="url" id="url" placeholder="url">
+                </div>
+                <div class="form_frame_input">
+                    <label class="label_input_count_loop">Кол-во заполнения форм</label>
+                    <input class="input" type="text" name="count_loops" id="count_loops" placeholder="5">
+                </div>
+                <div class="button_submit">
+                    <button class="form_button" id="form_button">Start</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
