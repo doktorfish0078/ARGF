@@ -26,7 +26,7 @@ def auto_recording_forms(URL, count_loops):
     options = Options()
     options.add_argument("--headless")
     options.binary_location = os.environ.get("PATH")
-    driver = webdriver.Firefox(options=options)
+    driver = webdriver.Firefox(executable_path=os.environ.get("GECKO_PATH"), options=options)
 
     try:
         driver.get(URL)
