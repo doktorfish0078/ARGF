@@ -15,7 +15,7 @@ html{
 body {
 	height: 100%;
 	color: black;
-    background-image: url("https://get.wallhere.com/photo/anime-anime-girls-Zero-pink-blue-Zero-Two-Zero-Two-Darling-in-the-FranXX-Code-002-digital-art-artwork-simple-simple-background-Darling-in-the-FranXX-1475203.jpg");
+    background-image: url("../images/bg.png");
     background-size: cover;
     background-position: center;
 }
@@ -31,8 +31,8 @@ a, a:hover, a:active {
 
 }
 .input_form{
-    margin-left: 15px;
-    margin-top: 10%;
+    padding-left: 15px;
+    padding-top: 10%;
     width: 30%;
 }
 .form_frame_input{
