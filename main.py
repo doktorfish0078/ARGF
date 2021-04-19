@@ -25,8 +25,8 @@ def show_home_page():
 def auto_recording_forms(URL, count_loops):
     options = Options()
     options.add_argument("--headless")
-    options.binary_location = os.environ.get("FIREFOX_BIN")
-    driver = webdriver.Firefox(executable_path=os.environ.get("GECKODRIVER_PATH"), options=options)
+    options.binary_location = os.environ.get("PATH")
+    driver = webdriver.Firefox(options=options)
 
     try:
         driver.get(URL)
