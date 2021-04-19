@@ -5,6 +5,8 @@ from random import randint
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
+import os
+
 
 app = Flask(__name__)
 
@@ -23,8 +25,8 @@ def show_home_page():
 def auto_recording_forms(URL, count_loops):
     options = Options()
     options.add_argument("--headless")
-
-    driver = webdriver.Firefox()
+    options.binary_location = os.environ.get("PATH_FIREFOX")
+    driver = webdriver.Firefox(options=options)
 
     try:
         driver.get(URL)
